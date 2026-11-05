@@ -1,13 +1,13 @@
 :root {
-  /* Paleta de Colores (Modifícalos si deseas probar otros tonos) */
-  --bg-dark: #0e0f12;         /* Fondo principal ultra oscuro */
+  /* Paleta de Colores (Azul Pelham Blue con alto contraste) */
+  --bg-dark: #0e0f12;         /* Fondo principal */
   --bg-card: #16181d;         /* Fondo de tarjetas */
-  --bg-card-hover: #1e2128;   /* Efecto hover en tarjetas */
-  --accent: #0284c7;          /* Azul cian vintage */
-  --accent-hover: #38bdf8;    /* Azul claro al pasar el cursor */
-  --text-main: #f3f4f6;       /* Texto principal blanco hueso */
-  --text-muted: #9ca3af;     /* Texto secundario gris */
-  --border: #282c34;         /* Bordes discretos */
+  --bg-card-hover: #1e2128;   /* Fondo tarjeta al pasar cursor */
+  --accent: #0284c7;          /* Azul acento principal */
+  --accent-hover: #38bdf8;    /* Azul claro hover */
+  --text-main: #f3f4f6;       /* Texto blanco hueso */
+  --text-muted: #9ca3af;     /* Texto gris secundario */
+  --border: #282c34;         /* Bordes */
 
   /* Tipografías */
   --font-heading: 'Oswald', sans-serif;
@@ -43,9 +43,8 @@ header {
   text-decoration: none;
 }
 
-/* TAMAÑO DEL LOGO AGRANDADO */
 .logo-img {
-  height: 65px; /* Aumentado de 45px a 65px */
+  height: 65px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -66,18 +65,17 @@ nav a:hover {
   color: var(--accent);
 }
 
+/* --- SECCIÓN HERO --- */
 .hero {
   text-align: center;
   padding: 6rem 1.5rem 5rem;
   width: 100%;
-  
-  /* Imagen de fondo del taller con filtro degradado oscuro */
   background: linear-gradient(
       to bottom,
       rgba(14, 15, 18, 0.78),
       rgba(14, 15, 18, 0.92)
     ),
-    url('taller.jpeg') center/cover no-repeat;
+    url('taller.jpg') center/cover no-repeat;
   border-bottom: 1px solid var(--border);
 }
 
@@ -85,45 +83,6 @@ nav a:hover {
   max-width: 850px;
   margin: 0 auto;
 }
-
-/* Estilos del Banner de Promoción */
-.promo-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background-color: rgba(229, 142, 38, 0.12);
-  border: 1px solid var(--accent);
-  padding: 0.4rem 1rem;
-  border-radius: 50px;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-}
-
-.badge-tag {
-  font-family: var(--font-heading);
-  background-color: var(--accent);
-  color: #0e0f12;
-  padding: 0.15rem 0.5rem;
-  border-radius: 4px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-}
-
-.badge-text {
-  color: var(--text-main);
-  font-weight: 500;
-}
-
-/* Ajuste responsivo para celulares */
-@media (max-width: 600px) {
-  .promo-badge {
-    flex-direction: column;
-    gap: 0.3rem;
-    border-radius: 12px;
-    padding: 0.6rem 0.8rem;
-  }
 
 .hero h1 {
   font-family: var(--font-heading);
@@ -142,6 +101,37 @@ nav a:hover {
   margin-bottom: 2.5rem;
 }
 
+/* BANNER DE PROMOCIÓN */
+.promo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: rgba(2, 132, 199, 0.15);
+  border: 1px solid var(--accent);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.badge-tag {
+  font-family: var(--font-heading);
+  background-color: var(--accent);
+  color: #ffffff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.badge-text {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* BOTÓN DE ACCIÓN */
 .btn-primary {
   display: inline-block;
   font-family: var(--font-heading);
@@ -149,7 +139,7 @@ nav a:hover {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   background-color: var(--accent);
-  color: #0e0f12;
+  color: #ffffff;
   padding: 0.9rem 2.2rem;
   border-radius: 4px;
   text-decoration: none;
@@ -162,9 +152,10 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
+/* --- SECCIÓN DE SERVICIOS (CUADRÍCULA) --- */
 .services {
   max-width: 1200px;
-  margin: 3rem auto;
+  margin: 4rem auto;
   padding: 0 1.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -199,6 +190,7 @@ nav a:hover {
   color: var(--text-muted);
 }
 
+/* --- FOOTER --- */
 footer {
   border-top: 1px solid var(--border);
   text-align: center;
@@ -216,4 +208,13 @@ footer .copyright {
   margin-top: 1.5rem;
   opacity: 0.5;
   font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .promo-badge {
+    flex-direction: column;
+    gap: 0.3rem;
+    border-radius: 12px;
+    padding: 0.6rem 0.8rem;
+  }
 }
