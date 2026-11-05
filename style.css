@@ -3,8 +3,8 @@
   --bg-dark: #0e0f12;         /* Fondo principal ultra oscuro */
   --bg-card: #16181d;         /* Fondo de tarjetas */
   --bg-card-hover: #1e2128;   /* Efecto hover en tarjetas */
-  --accent: #e58e26;          /* Naranja cobre / Tono lutherie vintage */
-  --accent-hover: #f59e0b;    /* Naranja al pasar el cursor */
+  --accent: #0284c7;          /* Azul cian vintage */
+  --accent-hover: #38bdf8;    /* Azul claro al pasar el cursor */
   --text-main: #f3f4f6;       /* Texto principal blanco hueso */
   --text-muted: #9ca3af;     /* Texto secundario gris */
   --border: #282c34;         /* Bordes discretos */
