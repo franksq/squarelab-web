@@ -75,7 +75,7 @@ nav a:hover {
       rgba(14, 15, 18, 0.78),
       rgba(14, 15, 18, 0.92)
     ),
-    url('taller.jpg') center/cover no-repeat;
+    url('taller.jpeg') center/cover no-repeat;
   border-bottom: 1px solid var(--border);
 }
 
