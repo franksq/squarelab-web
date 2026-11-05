@@ -30,15 +30,17 @@ header {
   margin: 0 auto;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: var(--text-main);
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.logo span {
-  color: var(--accent);
+.logo-img {
+  height: 45px; /* Ajusta la altura deseada para la barra superior */
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 nav a {
