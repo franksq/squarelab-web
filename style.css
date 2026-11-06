@@ -190,34 +190,7 @@ nav a:hover {
   color: var(--text-muted);
 }
 
-/* --- FOOTER --- */
-footer {
-  border-top: 1px solid var(--border);
-  text-align: center;
-  padding: 3rem 1.5rem;
-  margin-top: 5rem;
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-footer p {
-  margin-bottom: 0.4rem;
-}
-
-footer .copyright {
-  margin-top: 1.5rem;
-  opacity: 0.5;
-  font-size: 0.85rem;
-}
-
-@media (max-width: 600px) {
-  .promo-badge {
-    flex-direction: column;
-    gap: 0.3rem;
-    border-radius: 12px;
-    padding: 0.6rem 0.8rem;
-  }
-  /* --- SECCIÓN REDES SOCIALES --- */
+/* --- SECCIÓN REDES SOCIALES --- */
 .social-section {
   max-width: 1200px;
   margin: 5rem auto;
@@ -428,13 +401,38 @@ footer .copyright {
   text-align: center;
 }
 
-/* Responsivo para celulares */
+/* --- FOOTER --- */
+footer {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin-top: 5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin-bottom: 0.4rem;
+}
+
+footer .copyright {
+  margin-top: 1.5rem;
+  opacity: 0.5;
+  font-size: 0.85rem;
+}
+
+/* --- REGLAS RESPONSIVAS (MÓVIL) --- */
 @media (max-width: 600px) {
+  .promo-badge {
+    flex-direction: column;
+    gap: 0.3rem;
+    border-radius: 12px;
+    padding: 0.6rem 0.8rem;
+  }
   .social-grid {
     grid-template-columns: 1fr;
   }
   .social-card-light, .social-card-dark {
     padding: 1.5rem;
   }
-}
 }
