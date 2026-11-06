@@ -217,4 +217,224 @@ footer .copyright {
     border-radius: 12px;
     padding: 0.6rem 0.8rem;
   }
+  /* --- SECCIÓN REDES SOCIALES --- */
+.social-section {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+}
+
+.social-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Tarjeta Izquierda (Blanca/Clara) */
+.social-card-light {
+  background-color: #ffffff;
+  color: #111827;
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.social-tag {
+  font-family: var(--font-heading);
+  color: #ea580c;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.social-card-light h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  line-height: 1.1;
+  color: #0f172a;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.social-card-light p {
+  color: #4b5563;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.social-link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.social-btn-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.social-link-btn:hover {
+  border-color: #cbd5e1;
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+.btn-arrow {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* Iconos de colores en la lista */
+.icon-ig { color: #e1306c; }
+.icon-tt { color: #000000; }
+.icon-yt { color: #ff0000; }
+.icon-fb { color: #1877f2; }
+
+/* Tarjeta Derecha (Modo Oscuro / IG Preview) */
+.social-card-dark {
+  background-color: #12161a;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--border);
+}
+
+.ig-header-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.ig-header-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.ig-sub {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.ig-handle {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.ig-inner-card {
+  background-color: #ffffff;
+  color: #111827;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.ig-profile-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.ig-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+}
+
+.ig-name {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.ig-subtitle {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.ig-bio {
+  font-size: 0.85rem;
+  color: #334155;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.ig-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.ig-gallery img {
+  width: 100%;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.btn-ig-gradient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.btn-ig-gradient:hover {
+  opacity: 0.92;
+}
+
+.ig-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 600px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+  .social-card-light, .social-card-dark {
+    padding: 1.5rem;
+  }
+}
 }
