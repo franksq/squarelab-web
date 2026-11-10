@@ -173,6 +173,7 @@ nav a:hover {
 .card:hover {
   background-color: var(--bg-card-hover);
   border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(2, 132, 199, 0.25);
   transform: translateY(-4px);
 }
 
@@ -217,7 +218,7 @@ nav a:hover {
 
 .social-tag {
   font-family: var(--font-heading);
-  color: #ea580c;
+  color: #0284c7;
   font-size: 0.85rem;
   letter-spacing: 1.5px;
   font-weight: 700;
@@ -435,4 +436,152 @@ footer .copyright {
   .social-card-light, .social-card-dark {
     padding: 1.5rem;
   }
+}
+.status-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* --- SECCIÓN DE MARCAS (CARRUSEL INFINITO) --- */
+.brands-section {
+  text-align: center;
+  margin: 4rem auto 3rem;
+  padding: 0 1.5rem;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.brands-title {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* Contenedor principal con degrada de desvanecimiento en bordes */
+.brands-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+/* Pista en movimiento horizontal */
+.brands-track {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: max-content;
+  animation: scroll-brands 25s linear infinite;
+}
+
+/* Pausa la animación si el cliente pone el cursor encima */
+.brands-carousel:hover .brands-track {
+  animation-play-state: paused;
+}
+
+/* Estilo individual de cada logo */
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 50px;
+  filter: grayscale(100%) opacity(0.6); /* Mantiene los logos sutiles en tono gris */
+  transition: all 0.3s ease;
+}
+
+.brand-item:hover {
+  filter: grayscale(0%) opacity(1); /* Muestra el color original al pasar el cursor */
+  transform: scale(1.08);
+}
+
+.brand-item img {
+  max-width: 110px;
+  max-height: 40px;
+  object-fit: contain;
+}
+
+/* Animación de desplazamiento infinito */
+@keyframes scroll-brands {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.faq-heading {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.faq-item {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  padding: 1rem 1.2rem;
+}
+
+.faq-item summary {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--text-main);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.faq-item summary:hover {
+  color: var(--accent);
+}
+
+.faq-item p {
+  margin-top: 0.8rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
